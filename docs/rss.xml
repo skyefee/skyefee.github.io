@@ -1,5 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://skyefee.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://skyefee.github.io</link></image><lastBuildDate>Mon, 20 May 2024 11:47:24 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>Redis使用场景</title><link>https://skyefee.github.io/post/Redis-shi-yong-chang-jing.html</link><description>### 缓存&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://skyefee.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://skyefee.github.io</link></image><lastBuildDate>Mon, 20 May 2024 12:29:03 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>缓存雪崩、击穿、穿透</title><link>https://skyefee.github.io/post/huan-cun-xue-beng-%E3%80%81-ji-chuan-%E3%80%81-chuan-tou.html</link><description>### 缓存雪崩&#13;
+解释：大量key在同一时间内过期，导致db承受大量的流量&#13;
+解决：&#13;
+	1、过期时间增加随机数，避免大量数据在同一时刻过期&#13;
+	2、关注内存使用情况，避免数据被淘汰出去&#13;
+&#13;
+### 缓存击穿&#13;
+解释：热点数据过期，导致大量请求打到db&#13;
+解决：&#13;
+	1、注意热点数据的过期及续期&#13;
+	2、关注内存使用情况，避免数据被淘汰出去&#13;
+### 缓存穿透&#13;
+解释：访问的数据既不在redis也不在db中，导致缓存失效，请求打到db&#13;
+解决：&#13;
+	1、限制非法请求&#13;
+	2、缓存空值或默认值&#13;
+	3、利用布隆过滤器。</description><guid isPermaLink="true">https://skyefee.github.io/post/huan-cun-xue-beng-%E3%80%81-ji-chuan-%E3%80%81-chuan-tou.html</guid><pubDate>Mon, 20 May 2024 12:28:41 +0000</pubDate></item><item><title>Redis使用场景</title><link>https://skyefee.github.io/post/Redis-shi-yong-chang-jing.html</link><description>### 缓存&#13;
 看场景使用，下面说几个场景&#13;
 1、作只读缓存使用的话（大部分的场景都是作为只读缓存使用：例如优惠券策略等），有些情况会设置缓存时间，有些不会设置缓存时间&#13;
 	更新走db，缓存走删除（可以防止ABA）&#13;
