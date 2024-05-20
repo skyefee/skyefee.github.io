@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://skyefee.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://skyefee.github.io</link></image><lastBuildDate>Mon, 22 Apr 2024 08:57:27 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>SCP</title><link>https://skyefee.github.io/post/SCP.html</link><description>下载&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://skyefee.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://skyefee.github.io</link></image><lastBuildDate>Mon, 20 May 2024 11:47:24 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>Redis使用场景</title><link>https://skyefee.github.io/post/Redis-shi-yong-chang-jing.html</link><description>### 缓存&#13;
+看场景使用，下面说几个场景&#13;
+1、作只读缓存使用的话（大部分的场景都是作为只读缓存使用：例如优惠券策略等），有些情况会设置缓存时间，有些不会设置缓存时间&#13;
+	更新走db，缓存走删除（可以防止ABA）&#13;
+	设置了缓存时间的话（注意缓存雪崩、缓存击穿）；没设置缓存时间（注意存储）&#13;
+	缓存除了删除，也可以走更新，但是走更新的话需要考虑的问题就比较多，如果需要强一致性的话，可能需要加锁进行处理，同步更新，但是也需要考虑更新失败后如果处理，是进行回滚还是进行异步更新/删除？看使用场景&#13;
+2、作读写缓存，这个场景不算太多吧，相当于把缓存当db使用，这个场景主要是读写相当/写多于读，相对于上面的场景，若写请求大于读请求，频繁的删除缓存，再从db中读取写入缓存，相当于缓存失效或没有发挥缓存该有的效果。</description><guid isPermaLink="true">https://skyefee.github.io/post/Redis-shi-yong-chang-jing.html</guid><pubDate>Mon, 20 May 2024 11:47:00 +0000</pubDate></item><item><title>SCP</title><link>https://skyefee.github.io/post/SCP.html</link><description>下载&#13;
  `//从10.10.10.10机器上/opt/soft下载nginx-0.5.38.tar.gz文件到本地/opt/soft/目录中。</description><guid isPermaLink="true">https://skyefee.github.io/post/SCP.html</guid><pubDate>Mon, 22 Apr 2024 08:56:54 +0000</pubDate></item><item><title>74.搜索二维矩阵</title><link>https://skyefee.github.io/post/74.-sou-suo-er-wei-ju-zhen.html</link><description>**中等**&#13;
 给你一个满足下述两条属性的 m x n 整数矩阵：&#13;
 &#13;
