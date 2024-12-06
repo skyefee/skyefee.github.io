@@ -93,7 +93,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>
 <p><strong>如何忽略</strong>：如果你有一个长函数且想忽略这个检查，可以使用以下注释：</p>
 <div class="highlight highlight-source-go"><pre class="notranslate"><span class="pl-c">// nolint:funlen</span>
-<span class="pl-k">func</span> <span class="pl-en">MyLongFunction</span>() {
+<span class="pl-k">func</span> <span class="pl-s1">MyLongFunction</span>() {
     <span class="pl-c">// 很长的代码块</span>
 }</pre></div>
 </li>
@@ -112,7 +112,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>
 <p><strong>如何忽略</strong>：如果某一行代码超过长度限制且你不希望收到警告，可以在该行前面加上以下注释：</p>
 <div class="highlight highlight-source-go"><pre class="notranslate"><span class="pl-c">// nolint:lll</span>
-<span class="pl-s1">fmt</span>.<span class="pl-en">Println</span>(<span class="pl-s">"This is a very long line of code that exceeds the recommended length but we want to keep it intact for some reason"</span>)</pre></div>
+<span class="pl-s1">fmt</span>.<span class="pl-c1">Println</span>(<span class="pl-s">"This is a very long line of code that exceeds the recommended length but we want to keep it intact for some reason"</span>)</pre></div>
 </li>
 <li>
 <p><strong>配置</strong>：可以在 <code class="notranslate">golangci-lint</code> 的配置文件中设置自定义行长度：</p>
@@ -132,12 +132,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>
 <p><strong>如何忽略</strong>：你可以使用以下注释忽略这些检查：</p>
 <div class="highlight highlight-source-go"><pre class="notranslate"><span class="pl-c">// nolint:gocyclo</span>
-<span class="pl-k">func</span> <span class="pl-en">MyComplexFunction</span>() {
+<span class="pl-k">func</span> <span class="pl-s1">MyComplexFunction</span>() {
     <span class="pl-c">// 复杂的代码块</span>
 }
 
 <span class="pl-c">// nolint:gocognit</span>
-<span class="pl-k">func</span> <span class="pl-en">AnotherComplexFunction</span>() {
+<span class="pl-k">func</span> <span class="pl-s1">AnotherComplexFunction</span>() {
     <span class="pl-c">// 另一个复杂的代码块</span>
 }</pre></div>
 </li>

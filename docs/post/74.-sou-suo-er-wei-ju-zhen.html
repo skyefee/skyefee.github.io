@@ -107,8 +107,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 n == matrix[i].length<br>
 1 &lt;= m, n &lt;= 100<br>
 -104 &lt;= matrix[i][j], target &lt;= 104</p>
-<div class="highlight highlight-source-go"><pre class="notranslate"><span class="pl-k">func</span> <span class="pl-en">searchMatrix</span>(<span class="pl-s1">matrix</span> [][]<span class="pl-smi">int</span>, <span class="pl-s1">target</span> <span class="pl-smi">int</span>) <span class="pl-smi">bool</span> {
-	<span class="pl-s1">m</span>, <span class="pl-s1">n</span> <span class="pl-c1">:=</span> <span class="pl-en">len</span>(<span class="pl-s1">matrix</span>), <span class="pl-en">len</span>(<span class="pl-s1">matrix</span>[<span class="pl-c1">0</span>])
+<div class="highlight highlight-source-go"><pre class="notranslate"><span class="pl-k">func</span> <span class="pl-s1">searchMatrix</span>(<span class="pl-s1">matrix</span> [][]<span class="pl-smi">int</span>, <span class="pl-s1">target</span> <span class="pl-smi">int</span>) <span class="pl-smi">bool</span> {
+	<span class="pl-s1">m</span>, <span class="pl-s1">n</span> <span class="pl-c1">:=</span> <span class="pl-s1">len</span>(<span class="pl-s1">matrix</span>), <span class="pl-s1">len</span>(<span class="pl-s1">matrix</span>[<span class="pl-c1">0</span>])
 	<span class="pl-s1">left</span>, <span class="pl-s1">right</span> <span class="pl-c1">:=</span> <span class="pl-c1">0</span>, <span class="pl-s1">m</span><span class="pl-c1">*</span><span class="pl-s1">n</span><span class="pl-c1">-</span><span class="pl-c1">1</span>
 	<span class="pl-k">for</span> <span class="pl-s1">left</span> <span class="pl-c1">&lt;=</span> <span class="pl-s1">right</span> {
 		<span class="pl-s1">mid</span> <span class="pl-c1">:=</span> (<span class="pl-s1">left</span> <span class="pl-c1">+</span> <span class="pl-s1">right</span>) <span class="pl-c1">/</span> <span class="pl-c1">2</span>
@@ -124,16 +124,16 @@ n == matrix[i].length<br>
 	<span class="pl-k">return</span> <span class="pl-c1">false</span>
 }
 
-<span class="pl-k">func</span> <span class="pl-en">searchMatrixBST</span>(<span class="pl-s1">matrix</span> [][]<span class="pl-smi">int</span>, <span class="pl-s1">target</span> <span class="pl-smi">int</span>) <span class="pl-smi">bool</span> {
-	<span class="pl-s1">rows</span>, <span class="pl-s1">cloums</span> <span class="pl-c1">:=</span> <span class="pl-en">len</span>(<span class="pl-s1">matrix</span>), <span class="pl-en">len</span>(<span class="pl-s1">matrix</span>[<span class="pl-c1">0</span>])
+<span class="pl-k">func</span> <span class="pl-s1">searchMatrixBST</span>(<span class="pl-s1">matrix</span> [][]<span class="pl-smi">int</span>, <span class="pl-s1">target</span> <span class="pl-smi">int</span>) <span class="pl-smi">bool</span> {
+	<span class="pl-s1">rows</span>, <span class="pl-s1">cloums</span> <span class="pl-c1">:=</span> <span class="pl-s1">len</span>(<span class="pl-s1">matrix</span>), <span class="pl-s1">len</span>(<span class="pl-s1">matrix</span>[<span class="pl-c1">0</span>])
 	<span class="pl-s1">row</span>, <span class="pl-s1">cloum</span> <span class="pl-c1">:=</span> <span class="pl-c1">0</span>, <span class="pl-s1">cloums</span><span class="pl-c1">-</span><span class="pl-c1">1</span>
 	<span class="pl-k">for</span> {
 		<span class="pl-k">if</span> <span class="pl-s1">row</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">0</span> <span class="pl-c1">||</span> <span class="pl-s1">row</span> <span class="pl-c1">&gt;=</span> <span class="pl-s1">rows</span> <span class="pl-c1">||</span> <span class="pl-s1">cloum</span> <span class="pl-c1">&lt;</span> <span class="pl-c1">0</span> <span class="pl-c1">||</span> <span class="pl-s1">cloum</span> <span class="pl-c1">&gt;=</span> <span class="pl-s1">cloums</span> {
 			<span class="pl-k">return</span> <span class="pl-c1">false</span>
 		}
-		<span class="pl-k">if</span> <span class="pl-s1">target</span> <span class="pl-c1">&lt;</span> <span class="pl-s1">matrix</span>[<span class="pl-s1">row</span>][<span class="pl-s1">cloum</span>] {
+		<span class="pl-k">if</span> <span class="pl-s1">target</span> <span class="pl-c1">&lt;</span> <span class="pl-smi">matrix</span>[<span class="pl-smi">row</span>][<span class="pl-smi">cloum</span>] {
 			<span class="pl-s1">cloum</span><span class="pl-c1">--</span>
-		} <span class="pl-k">else</span> <span class="pl-k">if</span> <span class="pl-s1">target</span> <span class="pl-c1">&gt;</span> <span class="pl-s1">matrix</span>[<span class="pl-s1">row</span>][<span class="pl-s1">cloum</span>] {
+		} <span class="pl-k">else</span> <span class="pl-k">if</span> <span class="pl-s1">target</span> <span class="pl-c1">&gt;</span> <span class="pl-smi">matrix</span>[<span class="pl-smi">row</span>][<span class="pl-smi">cloum</span>] {
 			<span class="pl-s1">row</span><span class="pl-c1">++</span>
 		} <span class="pl-k">else</span> {
 			<span class="pl-k">return</span> <span class="pl-c1">true</span>
