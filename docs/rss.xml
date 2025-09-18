@@ -1,5 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://skyefee.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://skyefee.github.io</link></image><lastBuildDate>Mon, 25 Nov 2024 16:16:54 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>jq 的使用介绍</title><link>https://skyefee.github.io/post/jq%20-de-shi-yong-jie-shao.html</link><description># jq 的使用介绍&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://skyefee.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://skyefee.github.io</link></image><lastBuildDate>Thu, 18 Sep 2025 11:18:19 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>🏸</title><link>https://skyefee.github.io/post/%F0%9F%8F%B8.html</link><description>获取token
+curl --location --request POST 'https://flash.flashxsport.com/flash/auth/miniProRegister' \
+--header 'Host: flash.flashxsport.com' \
+--header 'Request-Channel: MP-WEIXIN' \
+--header 'content-type: application/json' \
+--header 'X-Access-Token;' \
+--header 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.59(0x18003b20) NetType/WIFI Language/zh_CN' \
+--header 'Referer: https://servicewechat.com/wxbb50595cab69d719/603/page-frame.html' \
+--data '{'code':'0f3mGR200O6oWU1QTd300KaXQI1mGR2o','sportId':1}'
+
+
+请求预约（需要修改X-Access-Token和activityId）
+curl --location --request POST 'https://flash.flashxsport.com/flash/activity/cancelApply' \
+--header 'Host: flash.flashxsport.com' \
+--header 'X-Access-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21QYXJhbWV0ZXIiOiJxd2VyMTIzNCIsInVzZXJJZCI6NDQ3MzI0NiwiZXhwIjoxNzU4Nzg4MTA1fQ.S0CWkHz-Bv1U3Rp1IaM8kUMpIT7uid-VuzxVqRC5BM8' \
+--header 'content-type: application/json' \
+--header 'Request-Channel: MP-WEIXIN' \
+--header 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.59(0x18003b20) NetType/WIFI Language/zh_CN' \
+--header 'Referer: https://servicewechat.com/wxbb50595cab69d719/603/page-frame.html' \
+--data-raw '{
+    'activityId': '2506233'
+}'
+
+取消预约（需要修改X-Access-Token和activityId）
+curl --location --request POST 'https://flash.flashxsport.com/flash/activity/cancelApply' \
+--header 'Host: flash.flashxsport.com' \
+--header 'X-Access-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21QYXJhbWV0ZXIiOiJxd2VyMTIzNCIsInVzZXJJZCI6NDQ3MzI0NiwiZXhwIjoxNzU4Nzg4MTA1fQ.S0CWkHz-Bv1U3Rp1IaM8kUMpIT7uid-VuzxVqRC5BM8' \
+--header 'content-type: application/json' \
+--header 'Request-Channel: MP-WEIXIN' \
+--header 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.59(0x18003b20) NetType/WIFI Language/zh_CN' \
+--header 'Referer: https://servicewechat.com/wxbb50595cab69d719/603/page-frame.html' \
+--data-raw '{
+    'activityId': '2506233'
+}'
+
+获取activityId（需要修改X-Access-Token）
+curl --location --request GET 'https://flash.flashxsport.com/flash/activity/userWillStartActivityList' \
+--header 'Host: flash.flashxsport.com' \
+--header 'Request-Channel: MP-WEIXIN' \
+--header 'content-type: application/json' \
+--header 'X-Access-Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21QYXJhbWV0ZXIiOiJxd2VyMTIzNCIsInVzZXJJZCI6NDU4NzAyOSwiZXhwIjoxNzU4Nzg5Njc3fQ.CjxcIFt1TRCEDGFcWOjIW-ZI8F8QoFCFFgtNW19iPiw' \
+--header 'User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.59(0x18003b20) NetType/WIFI Language/zh_CN' \
+--header 'Referer: https://servicewechat.com/wxbb50595cab69d719/603/page-frame.html'。</description><guid isPermaLink="true">https://skyefee.github.io/post/%F0%9F%8F%B8.html</guid><pubDate>Thu, 18 Sep 2025 09:00:48 +0000</pubDate></item><item><title>jq 的使用介绍</title><link>https://skyefee.github.io/post/jq%20-de-shi-yong-jie-shao.html</link><description># jq 的使用介绍&#13;
 &#13;
 `jq` 是一个强大的命令行工具，用于解析、查询和操作 JSON 数据。</description><guid isPermaLink="true">https://skyefee.github.io/post/jq%20-de-shi-yong-jie-shao.html</guid><pubDate>Mon, 25 Nov 2024 08:56:38 +0000</pubDate></item><item><title>golint中关于长度的检查的介绍&amp;忽略方法</title><link>https://skyefee.github.io/post/golint-zhong-guan-yu-chang-du-de-jian-cha-de-jie-shao-%26-hu-lve-fang-fa.html</link><description>`golint` 本身并没有针对代码长度的特定检查功能。</description><guid isPermaLink="true">https://skyefee.github.io/post/golint-zhong-guan-yu-chang-du-de-jian-cha-de-jie-shao-%26-hu-lve-fang-fa.html</guid><pubDate>Wed, 21 Aug 2024 14:41:37 +0000</pubDate></item><item><title>kafka中的Rebalance机制是什么？</title><link>https://skyefee.github.io/post/kafka-zhong-de-Rebalance-ji-zhi-shi-shen-me-%EF%BC%9F.html</link><description>**Rebalance 本质上是一种协议，规定了一个 Consumer Group 下的所有 Consumer 如何达成一致，来分配订阅 Topic 的每个分区。</description><guid isPermaLink="true">https://skyefee.github.io/post/kafka-zhong-de-Rebalance-ji-zhi-shi-shen-me-%EF%BC%9F.html</guid><pubDate>Wed, 29 May 2024 09:06:41 +0000</pubDate></item><item><title>kafka中的Consumer Group何时触发Rebalance机制？</title><link>https://skyefee.github.io/post/kafka-zhong-de-Consumer%20Group-he-shi-chu-fa-Rebalance-ji-zhi-%EF%BC%9F.html</link><description>### 以下都会触发Rebalance&#13;
 1. 消费者组内成员发生变化&#13;
